@@ -1,10 +1,13 @@
 import React from 'react';
-import {Button, NativeModules} from 'react-native';
+import {Button} from 'react-native';
+import CalendarModule from './NativeCalendarModule';
 
-const {CalendarModule} = NativeModules;
+// constantsToExportで返されている値
+const {DEFAULT_EVENT_NAME} = CalendarModule.getConstants();
 
 const NewModuleButton = () => {
   const onPress = () => {
+    console.log(DEFAULT_EVENT_NAME);
     CalendarModule.createCalendarEvent('testName', 'testLocation');
   };
 

@@ -27,4 +27,16 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(getName)
   return [[UIDevice currentDevice] name];
 }
 
+// constantsToExportをオーバーライドすることによりConstantsaをexportすることができる
+- (NSDictionary *)constantsToExport
+{
+  return @{ @"DEFAULT_EVENT_NAME": @"New Event" };
+}
+
+// クラスの初期化をメインスレッドで行わない
++ (BOOL)requiresMainQueueSetup
+{
+    return NO;
+}
+
 @end
