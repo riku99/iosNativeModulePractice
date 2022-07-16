@@ -12,6 +12,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		327257AB2882E0380054B36B /* RCTCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 327257AA2882D4FF0054B36B /* RCTCalendarModule.m */; };
 		7699B88040F8A987B510C191 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		13B07FAE1A68108700A75B9A /* iosNativeModulePractice */ = {
 			isa = PBXGroup;
 			children = (
+				327257AA2882D4FF0054B36B /* RCTCalendarModule.m */,
+				327257A92882D4C00054B36B /* RCTCalendarModule.h */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -118,8 +121,6 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				327257AA2882D4FF0054B36B /* RCTCalendarModule.m */,
-				327257A92882D4C00054B36B /* RCTCalendarModule.h */,
 				13B07FAE1A68108700A75B9A /* iosNativeModulePractice */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* iosNativeModulePracticeTests */,
@@ -416,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				327257AB2882E0380054B36B /* RCTCalendarModule.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
