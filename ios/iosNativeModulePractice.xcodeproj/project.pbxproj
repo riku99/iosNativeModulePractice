@@ -13,6 +13,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		327257AB2882E0380054B36B /* RCTCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 327257AA2882D4FF0054B36B /* RCTCalendarModule.m */; };
+		327257AE2883AE0F0054B36B /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327257AD2883AE0F0054B36B /* CalendarManager.swift */; };
+		327257B02883B0C00054B36B /* CalendarManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 327257AF2883B0C00054B36B /* CalendarManagerBridge.m */; };
 		7699B88040F8A987B510C191 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,9 @@
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		327257A92882D4C00054B36B /* RCTCalendarModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTCalendarModule.h; sourceTree = "<group>"; };
 		327257AA2882D4FF0054B36B /* RCTCalendarModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTCalendarModule.m; sourceTree = "<group>"; };
+		327257AC2883AE0D0054B36B /* iosNativeModulePractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosNativeModulePractice-Bridging-Header.h"; sourceTree = "<group>"; };
+		327257AD2883AE0F0054B36B /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		327257AF2883B0C00054B36B /* CalendarManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManagerBridge.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-iosNativeModulePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosNativeModulePractice.debug.xcconfig"; path = "Target Support Files/Pods-iosNativeModulePractice/Pods-iosNativeModulePractice.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-iosNativeModulePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosNativeModulePractice.release.xcconfig"; path = "Target Support Files/Pods-iosNativeModulePractice/Pods-iosNativeModulePractice.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-iosNativeModulePractice-iosNativeModulePracticeTests/Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +102,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				327257AD2883AE0F0054B36B /* CalendarManager.swift */,
+				327257AF2883B0C00054B36B /* CalendarManagerBridge.m */,
+				327257AC2883AE0D0054B36B /* iosNativeModulePractice-Bridging-Header.h */,
 			);
 			name = iosNativeModulePractice;
 			sourceTree = "<group>";
@@ -212,7 +220,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -418,6 +426,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				327257AB2882E0380054B36B /* RCTCalendarModule.m in Sources */,
+				327257B02883B0C00054B36B /* CalendarManagerBridge.m in Sources */,
+				327257AE2883AE0F0054B36B /* CalendarManager.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
@@ -438,6 +448,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -465,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-iosNativeModulePractice-iosNativeModulePracticeTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = iosNativeModulePracticeTests/Info.plist;
@@ -505,6 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = iosNativeModulePractice;
+				SWIFT_OBJC_BRIDGING_HEADER = "iosNativeModulePractice-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -530,6 +543,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = iosNativeModulePractice;
+				SWIFT_OBJC_BRIDGING_HEADER = "iosNativeModulePractice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

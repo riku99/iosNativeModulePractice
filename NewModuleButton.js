@@ -1,9 +1,11 @@
 import React from 'react';
 import {Button} from 'react-native';
 import CalendarModule from './NativeCalendarModule';
+import CalendarManager from './SwiftCalendarManager';
 
 // constantsToExportで返されている値
 const {DEFAULT_EVENT_NAME} = CalendarModule.getConstants();
+const managerConstants = CalendarManager.getConstants();
 
 const NewModuleButton = () => {
   const onPress = async () => {
@@ -28,6 +30,10 @@ const NewModuleButton = () => {
     } catch (e) {
       console.error(e);
     }
+
+    console.log(managerConstants);
+    const r = await CalendarManager.add('Riku');
+    console.log('Returned is ' + r);
   };
 
   return (
