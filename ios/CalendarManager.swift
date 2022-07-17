@@ -4,9 +4,8 @@ import Foundation
 @objc(CalendarManager)
 class CalendarManager: NSObject {
   @objc
-  func add(_ name: String, resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
+  func call(_ name: String, resolve: RCTPromiseResolveBlock, rejecter reject: RCTPromiseRejectBlock) {
     do {
-      print("😏 Called add")
       resolve(name)
     } catch {
       reject("Error", "error", nil)

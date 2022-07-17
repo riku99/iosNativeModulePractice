@@ -7,9 +7,11 @@ class Counter: RCTEventEmitter {
   @objc
   func increment() {
     count += 1
+    // イベントの発火
     sendEvent(withName: "onIncrement", body: ["count": count])
   }
   
+  // addListenerでとるイベント名の定義
   override func supportedEvents() -> [String]! {
     return ["onIncrement"]
   }

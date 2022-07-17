@@ -6,7 +6,7 @@
 @interface RCT_EXTERN_MODULE(CalendarManager, NSObject)
 
 // objcでいう RCT_EXPORT_METHOD()
-RCT_EXTERN_METHOD(add:(NSString *)name
+RCT_EXTERN_METHOD(call:(NSString *)name
                   resolve:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject
                   )
