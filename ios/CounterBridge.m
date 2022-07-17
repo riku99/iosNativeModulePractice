@@ -1,8 +1,7 @@
-//
-//  CounterBridge.m
-//  iosNativeModulePractice
-//
-//  Created by 黒澤陸 on 2022/07/17.
-//
-
 #import <Foundation/Foundation.h>
+#import <React/RCTBridgeModule.h>
+#import "React/RCTEventEmitter.h"
+
+@interface RCT_EXTERN_MODULE(Counter, RCTEventEmitter)
+  RCT_EXTERN_METHOD(increment)
+@end

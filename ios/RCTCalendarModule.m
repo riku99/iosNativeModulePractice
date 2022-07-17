@@ -1,5 +1,4 @@
 #import <Foundation/Foundation.h>
-
 #import "RCTCalendarModule.h"
 #import <React/RCTLog.h>
 

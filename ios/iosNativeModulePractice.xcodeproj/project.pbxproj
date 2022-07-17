@@ -15,6 +15,8 @@
 		327257AB2882E0380054B36B /* RCTCalendarModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 327257AA2882D4FF0054B36B /* RCTCalendarModule.m */; };
 		327257AE2883AE0F0054B36B /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327257AD2883AE0F0054B36B /* CalendarManager.swift */; };
 		327257B02883B0C00054B36B /* CalendarManagerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 327257AF2883B0C00054B36B /* CalendarManagerBridge.m */; };
+		327257B22883E84F0054B36B /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327257B12883E84E0054B36B /* Counter.swift */; };
+		327257B42883EA410054B36B /* CounterBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 327257B32883EA410054B36B /* CounterBridge.m */; };
 		7699B88040F8A987B510C191 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-iosNativeModulePractice-iosNativeModulePracticeTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,8 @@
 		327257AC2883AE0D0054B36B /* iosNativeModulePractice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosNativeModulePractice-Bridging-Header.h"; sourceTree = "<group>"; };
 		327257AD2883AE0F0054B36B /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		327257AF2883B0C00054B36B /* CalendarManagerBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManagerBridge.m; sourceTree = "<group>"; };
+		327257B12883E84E0054B36B /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		327257B32883EA410054B36B /* CounterBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CounterBridge.m; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-iosNativeModulePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosNativeModulePractice.debug.xcconfig"; path = "Target Support Files/Pods-iosNativeModulePractice/Pods-iosNativeModulePractice.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-iosNativeModulePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosNativeModulePractice.release.xcconfig"; path = "Target Support Files/Pods-iosNativeModulePractice/Pods-iosNativeModulePractice.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig"; path = "Target Support Files/Pods-iosNativeModulePractice-iosNativeModulePracticeTests/Pods-iosNativeModulePractice-iosNativeModulePracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				327257AD2883AE0F0054B36B /* CalendarManager.swift */,
 				327257AF2883B0C00054B36B /* CalendarManagerBridge.m */,
 				327257AC2883AE0D0054B36B /* iosNativeModulePractice-Bridging-Header.h */,
+				327257B12883E84E0054B36B /* Counter.swift */,
+				327257B32883EA410054B36B /* CounterBridge.m */,
 			);
 			name = iosNativeModulePractice;
 			sourceTree = "<group>";
@@ -427,6 +433,8 @@
 			files = (
 				327257AB2882E0380054B36B /* RCTCalendarModule.m in Sources */,
 				327257B02883B0C00054B36B /* CalendarManagerBridge.m in Sources */,
+				327257B42883EA410054B36B /* CounterBridge.m in Sources */,
+				327257B22883E84F0054B36B /* Counter.swift in Sources */,
 				327257AE2883AE0F0054B36B /* CalendarManager.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
