@@ -6,9 +6,28 @@ import CalendarModule from './NativeCalendarModule';
 const {DEFAULT_EVENT_NAME} = CalendarModule.getConstants();
 
 const NewModuleButton = () => {
-  const onPress = () => {
+  const onPress = async () => {
     console.log(DEFAULT_EVENT_NAME);
-    CalendarModule.createCalendarEvent('testName', 'testLocation');
+    CalendarModule.createCalendarEvent(
+      'testName',
+      'testLocation',
+      (error, eventId) => {
+        if (error) {
+          console.error(`Error found! ${error}`);
+        }
+        console.log(`event id ${eventId} returned`);
+      },
+    );
+
+    try {
+      const eventId = await CalendarModule.createCalendarEventPromise(
+        'Party',
+        'my house',
+      );
+      console.log(`Created a new promise event with id ${eventId}`);
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   return (

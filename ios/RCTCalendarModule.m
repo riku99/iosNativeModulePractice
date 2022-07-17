@@ -13,10 +13,27 @@ RCT_EXPORT_MODULE();
 // RCT_EXPORT_METHODにメソッドを登録することによりJS側で呼び出すことができる
 // 非同期なので返り値はvoid
 // ここでは createCalendarEvent というメソッドを定義
-RCT_EXPORT_METHOD(createCalendarEvent:(NSString *)name location:(NSString *)location)
+// Native側からJS側に値を渡すためにはcallbackを使う。これは常に非同期
+RCT_EXPORT_METHOD(createCalendarEvent:(NSString *)title location:(NSString *)location callback: (RCTResponseSenderBlock)callback)
 {
-  // ログ出力
-  RCTLogInfo(@"Pretending to create an event %@ at %@", name, location);
+ NSNumber *eventId = [NSNumber numberWithInt:123];
+  callback(@[[NSNull null], eventId]); // 引数の最初のデータをエラーオブジェクトとして管理
+
+ RCTLogInfo(@"Pretending to create an event %@ at %@", title, location);
+}
+
+// ネイティブモジュールメソッドの最後のパラメータがRCTPromiseResolveBlock, RCTPromiseRejectBlockの場合、JS側ではPromiseを返す
+RCT_EXPORT_METHOD(createCalendarEventPromise:(NSString *)title
+                  location:(NSString *)location
+                  resolver:(RCTPromiseResolveBlock)resolve
+                  rejecter:(RCTPromiseRejectBlock)reject)
+{
+  NSInteger eventId = 22;
+  if (eventId) {
+    resolve(@(eventId));
+  } else {
+    reject(@"event_failure", @"no event id returned", nil);
+  }
 }
 
 // RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHODで同期処理のメソッドを行うことができる
